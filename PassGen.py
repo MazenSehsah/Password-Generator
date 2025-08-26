@@ -22,11 +22,9 @@ def main():
     use_symbols = input("Include symbols? (y/n): ").lower() == "y"
     use_upper = input("Include uppercase letters? (y/n): ").lower() == "y"
 
-    # توليد باسورد
     password = generate_password(length, use_digits, use_symbols, use_upper)
     print("\nGenerated Password:", password)
 
-    # حفظ في ملف
     with open("PassGen.txt", "a") as file:
         file.write(password + "\n")
 
